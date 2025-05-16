@@ -1,8 +1,4 @@
 class Temperature:
-    """
-    Класс для хранения температуры в Цельсиях и получения в Фаренгейтах.
-    """
-
     def __init__(self, celsius=0):
         self._celsius = celsius
 
@@ -21,8 +17,6 @@ class Temperature:
     def fahrenheit(self):
         return self._celsius * 9 / 5 + 32
 
-
-# Пример использования
 if __name__ == "__main__":
     temp = Temperature(20)
     print(f"Цельсий: {temp.celsius}")
