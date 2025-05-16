@@ -1,8 +1,4 @@
 class Student:
-    """
-    Класс студент с магическими методами.
-    """
-
     def __init__(self, name, student_id):
         self.name = name
         self.student_id = student_id
@@ -37,7 +33,6 @@ class Student:
         return len(self.grades)
 
 
-# Пример использования
 if __name__ == "__main__":
     s1 = Student("Аня", 1)
     s1.add_grade(9)
