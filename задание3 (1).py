@@ -2,22 +2,12 @@ from abc import ABC, abstractmethod
 import math
 
 class Shape(ABC):
-    """
-    Абстрактный класс геометрической фигуры.
-    """
-
     @abstractmethod
     def area(self):
-        """
-        Метод для площади.
-        """
         pass
 
     @abstractmethod
     def perimeter(self):
-        """
-        Метод для периметра.
-        """
         pass
 
 
@@ -62,13 +52,3 @@ def print_shape_info(shape):
     print(f"Площадь: {shape.area():.2f}")
     print(f"Периметр: {shape.perimeter():.2f}")
 
-
-# Пример использования
-if __name__ == "__main__":
-    rect = Rectangle(4, 5)
-    circle = Circle(3)
-    triangle = Triangle(3, 4, 5)
-
-    print_shape_info(rect)
-    print_shape_info(circle)
-    print_shape_info(triangle)
