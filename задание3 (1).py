@@ -1,15 +1,12 @@
-from abc import ABC, abstractmethod
 import math
+from abc import ABC, abstractmethod
 
 class Shape(ABC):
-    @abstractmethod
     def area(self):
         pass
 
-    @abstractmethod
     def perimeter(self):
         pass
-
 
 class Rectangle(Shape):
     def __init__(self, width, height):
@@ -28,27 +25,16 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return math.pi * self.radius ** 2
+        return math.pi * (self.radius ** 2)
 
     def perimeter(self):
         return 2 * math.pi * self.radius
 
-
-class Triangle(Shape):
-    def __init__(self, side1, side2, side3):
-        self.side1 = side1
-        self.side2 = side2
-        self.side3 = side3
-
-    def area(self):
-        s = (self.side1 + self.side2 + self.side3) / 2
-        return math.sqrt(s * (s - self.side1) * (s - self.side2) * (s - self.side3))
-
-    def perimeter(self):
-        return self.side1 + self.side2 + self.side3
-
-
 def print_shape_info(shape):
-    print(f"Площадь: {shape.area():.2f}")
-    print(f"Периметр: {shape.perimeter():.2f}")
+    print(f"Area: {shape.area()}, Perimeter: {shape.perimeter()}")
+
+shapes = [Rectangle(10, 5), Circle(7)] # Примеры фигур
+
+for shape in shapes:
+    print_shape_info(shape)
 
